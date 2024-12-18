@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Decision Tree</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #87CEFA, #FFFFFF);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style> -->
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Recommendation</h1>
+        <form id="decisionForm">
+            <label for="location">Do you prefer the mountains or the beach?</label>
+            <select id="location" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Mountains">Mountains</option>
+                <option value="Beach">Beach</option>
+            </select>
+
+            <label for="preference">Are you looking for adventure or relaxation?</label>
+            <select id="preference" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Relaxation">Relaxation</option>
+            </select>
+
+            <label for="budget">What’s your budget?</label>
+            <select id="budget" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <button type="button" onclick="generateRecommendation()">Get Recommendation</button>
+        </form>
+
+        <div id="output" class="output" style="display: none;"></div>
+    </div>
+
+ 
+</body>
+</html>
+
